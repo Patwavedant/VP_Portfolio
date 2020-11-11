@@ -2,670 +2,336 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Vedant Patwa - Home | About | Contact</title>
-    <link rel="icon" href="./favicon.ico">
-    <style>
-        @import url("https://fonts.googleapis.com/css?family=Ubuntu");
+	<meta charset="utf-8">
+
+	<title>Vedant Patwa</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="author" content="templatemo">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- animate -->
+	<link rel="stylesheet" href="css/animate.min.css">
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- font-awesome -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<!-- google font -->
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700,800' rel='stylesheet' type='text/css'>
+	<!-- fullpage -->
+	<link rel="stylesheet" href="css/jquery.fullPage.css">
+	<!-- custom -->
+	<link rel="stylesheet" href="css/templatemo-style.css">
 
-        #outerCraneContainer {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            bottom: 0;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            box-shadow: inset 0 -60px 0 -30px #ff6347;
-        }
-
-        .buildings {
-            height: 84.9673202614379px;
-            width: 100%;
-            left: 0;
-        }
-
-        .buildings div {
-            height: inherit;
-            width: 42.48366013071895px;
-            background: #ff6347;
-            position: absolute;
-            bottom: 10%;
-        }
-
-        .buildings div:after {
-            content: '';
-            width: 80%;
-            height: 60%;
-            left: 10%;
-            bottom: 30%;
-            background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAGCAYAAAAG5SQMAAAAFElEQVQImWP4////fwYYIJKDEwAAfPsP8eFXG40AAAAASUVORK5CYII=") repeat;
-            position: absolute;
-        }
-
-        .buildings div:nth-of-type(1) {
-            width: 42.48366013071895px;
-            height: 21.241830065359476px;
-            right: 37%;
-            bottom: 18%;
-        }
-
-        .buildings div:nth-of-type(1):after {
-            bottom: 11%;
-        }
-
-        .buildings div:nth-of-type(2) {
-            width: 48.552754435107374px;
-            height: 28.322440087145967px;
-            right: 30%;
-            bottom: 35%;
-            -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-        }
-
-        .buildings div:nth-of-type(2):after {
-            width: 60%;
-            left: 11%;
-        }
-
-        .buildings div:nth-of-type(3) {
-            width: 24.276377217553687px;
-            height: 37.76325344952796px;
-            left: 40%;
-            bottom: 35%;
-        }
-
-        .buildings div:nth-of-type(3):after {
-            bottom: 0;
-            width: 20%;
-            height: 85%;
-            left: 70%;
-        }
-
-        .buildings div:nth-of-type(4) {
-            width: 84.9673202614379px;
-            height: 21.241830065359476px;
-            left: 24%;
-            bottom: 20%;
-        }
-
-        .buildings div:nth-of-type(4):after {
-            background: none;
-        }
-
-        .buildings div:nth-of-type(5) {
-            width: 61.794414735591204px;
-            height: 67.97385620915033px;
-            left: 47%;
-            bottom: 10%;
-        }
-
-        .buildings div:nth-of-type(5):after {
-            bottom: 0;
-            width: 40%;
-            height: 85%;
-            left: 20%;
-        }
-
-        .crane,
-        .buildings {
-            position: absolute;
-            bottom: 0;
-        }
-
-        .crane div {
-            border-radius: 2px;
-            position: absolute;
-        }
-
-        .crane .line {
-            border: none;
-            background: #ff6347;
-            outline: 1px solid transparent;
-            z-index: 0;
-        }
-
-        .crane .lineOne {
-            width: 60%;
-            left: 11%;
-            top: 0;
-        }
-
-        .crane .lineTwo {
-            width: 19%;
-            right: 8%;
-            top: 0;
-        }
-
-        .crane .line.lineThree {
-            height: 30%;
-            top: 22%;
-            left: 9%;
-        }
-
-        .crane .line.lineThree:after {
-            content: '';
-            position: absolute;
-            height: 0.2em;
-            width: 9000%;
-            background: #ff826c;
-            display: block;
-            bottom: 0;
-            left: -4500%;
-            border: solid 1px #ff6347;
-        }
-
-        .craneTwo .line.lineThree:after {
-            height: 0.1em;
-        }
-
-        .craneThree .line.lineThree:after {
-            height: 0.05em;
-        }
-
-        .stand {
-            height: 100%;
-            width: 5%;
-            right: 25%;
-            z-index: 1;
-            background: linear-gradient(to top, #ff6347, #f29b8b);
-        }
-
-        .craneTwo .stand {
-            background: linear-gradient(to top, #ff6347, #f19483);
-        }
-
-        .craneThree .stand {
-            background: linear-gradient(to top, #ff6347, #f08c7b);
-        }
-
-        .weight {
-            height: 20%;
-            width: 8%;
-            right: 4%;
-            top: 12%;
-            z-index: 2;
-            background: #f88f7c;
-        }
-
-        .craneTwo .weight {
-            background: #f88773;
-        }
-
-        .craneThree .weight {
-            background: #f77f6b;
-        }
-
-        .cabin {
-            height: 9%;
-            width: 12%;
-            right: 24%;
-            top: 20%;
-            z-index: 2;
-            background: #f88f7c;
-        }
-
-        .cabin:after {
-            content: '';
-            position: absolute;
-            height: 10%;
-            width: 100%;
-            background: #fff;
-            display: block;
-            top: 60%;
-            left: 0;
-        }
-
-        .craneTwo .cabin {
-            background: #f88773;
-        }
-
-        .craneThree .cabin {
-            background: #f77f6b;
-        }
-
-        .arm {
-            height: 7%;
-            width: 100%;
-            top: 15%;
-            z-index: 3;
-            background: #f88f7c;
-        }
-
-        .craneTwo .arm {
-            background: #f88773;
-        }
-
-        .craneThree .arm {
-            background: #f77f6b;
-        }
-
-        .crane div.arm {
-            border-top-left-radius: 10px;
-        }
-
-        .brick {
-            height: 6%;
-            width: 9%;
-            bottom: 0;
-            left: 40%;
-            background: #ff7359;
-        }
-
-        .brickTwo {
-            left: 48%;
-        }
-
-        .brickThree {
-            bottom: 5.5%;
-            left: 44%;
-        }
-
-        .craneOne {
-            width: 260px;
-            height: 169.9346405228758px;
-            left: 20%;
-        }
-
-        .craneOne div {
-            border: solid 1px #ff6347;
-        }
-
-        .craneOne .line {
-            height: 1px;
-        }
-
-        .craneOne .lineThree {
-            width: 1px;
-        }
-
-        .craneTwo {
-            width: 200px;
-            height: 130.718954248366px;
-            -webkit-transform: scaleX(-1);
-            transform: scaleX(-1);
-            left: 40%;
-            z-index: -1;
-        }
-
-        .craneTwo div {
-            border: solid 1px #ff6347;
-        }
-
-        .craneTwo .line {
-            height: 0.769230769230769px;
-        }
-
-        .craneTwo .lineThree {
-            width: 0.714285714285714px;
-            -webkit-animation-delay: 3s;
-            animation-delay: 3s;
-        }
-
-        .craneTwo .cabin,
-        .craneTwo .arm,
-        .craneTwo .picker,
-        .craneTwo .weight {
-            -webkit-animation-delay: 3s;
-            animation-delay: 3s;
-        }
-
-        .craneThree {
-            width: 130px;
-            height: 84.9673202614379px;
-            left: 60%;
-            z-index: -1;
-        }
-
-        .craneThree div {
-            border: solid 1px #ff6347;
-        }
-
-        .craneThree .line {
-            height: 0.5px;
-        }
-
-        .craneThree .lineThree {
-            width: 0.5px;
-            -webkit-animation-delay: 1.5s;
-            animation-delay: 1.5s;
-        }
-
-        .craneThree .brickThree {
-            bottom: 5%;
-        }
-
-        .craneThree .brickOne,
-        .craneThree .brickTwo {
-            bottom: 0;
-        }
-
-        .craneThree .cabin,
-        .craneThree .arm,
-        .craneThree .picker,
-        .craneThree .weight {
-            -webkit-animation-delay: 1.5s;
-            animation-delay: 1.5s;
-        }
-
-        .crane {
-            -webkit-perspective: 600px;
-            perspective: 600px;
-        }
-
-        .lineOne {
-            -webkit-transform-origin: right 0;
-            transform-origin: right 0;
-            -webkit-animation: moveLineOne 12s infinite alternate;
-            animation: moveLineOne 12s infinite alternate;
-        }
-
-        .lineTwo {
-            -webkit-transform-origin: top left;
-            transform-origin: top left;
-            -webkit-animation: moveLineTwo 12s infinite alternate;
-            animation: moveLineTwo 12s infinite alternate;
-        }
-
-        .lineThree {
-            -webkit-transform-origin: right center;
-            transform-origin: right center;
-            -webkit-animation: moveLineThree 12s ease-in-out infinite alternate;
-            animation: moveLineThree 12s ease-in-out infinite alternate;
-        }
-
-        .cabin,
-        .arm,
-        .picker {
-            -webkit-transform-origin: 80% center;
-            transform-origin: 80% center;
-            -webkit-animation: moveCrane 12s infinite alternate;
-            animation: moveCrane 12s infinite alternate;
-        }
-
-        .weight {
-            -webkit-transform-origin: 0 center;
-            transform-origin: 0 center;
-            -webkit-animation: moveWeight 12s infinite alternate;
-            animation: moveWeight 12s infinite alternate;
-        }
-
-        html {
-            -ms-text-size-adjust: 100%;
-            -webkit-text-size-adjust: 100%;
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        html,
-        body {
-            height: 100%;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            background: linear-gradient(to top, #ffa191, #ffc247);
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
-        }
-
-        #content {
-            height: 100%;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            font-family: Ubuntu;
-            color: #fff;
-        }
-
-        #content h1,
-        #content p {
-            margin: -8rem 0 0 1rem;
-        }
-
-        #content p {
-            margin-top: 0.5rem;
-        }
-
-        #license {
-            position: absolute;
-            bottom: 0;
-            right: 5px;
-        }
-
-        @-webkit-keyframes moveCrane {
-
-            0%,
-            20% {
-                -webkit-transform: rotateY(0);
-                transform: rotateY(0);
-            }
-
-            70%,
-            100% {
-                -webkit-transform: rotateY(45deg);
-                transform: rotateY(45deg);
-            }
-        }
-
-        @keyframes moveCrane {
-
-            0%,
-            20% {
-                -webkit-transform: rotateY(0);
-                transform: rotateY(0);
-            }
-
-            70%,
-            100% {
-                -webkit-transform: rotateY(45deg);
-                transform: rotateY(45deg);
-            }
-        }
-
-        @-webkit-keyframes moveWeight {
-
-            0%,
-            20% {
-                -webkit-transform: rotateY(0) translateX(0);
-                transform: rotateY(0) translateX(0);
-            }
-
-            70%,
-            100% {
-                -webkit-transform: rotateY(45deg) translateX(-50%);
-                transform: rotateY(45deg) translateX(-50%);
-            }
-        }
-
-        @keyframes moveWeight {
-
-            0%,
-            20% {
-                -webkit-transform: rotateY(0) translateX(0);
-                transform: rotateY(0) translateX(0);
-            }
-
-            70%,
-            100% {
-                -webkit-transform: rotateY(45deg) translateX(-50%);
-                transform: rotateY(45deg) translateX(-50%);
-            }
-        }
-
-        @-webkit-keyframes moveLineOne {
-
-            0%,
-            20% {
-                -webkit-transform: rotateY(0) rotateZ(-10deg);
-                transform: rotateY(0) rotateZ(-10deg);
-            }
-
-            70%,
-            100% {
-                -webkit-transform: rotateY(45deg) rotateZ(-10deg);
-                transform: rotateY(45deg) rotateZ(-10deg);
-            }
-        }
-
-        @keyframes moveLineOne {
-
-            0%,
-            20% {
-                -webkit-transform: rotateY(0) rotateZ(-10deg);
-                transform: rotateY(0) rotateZ(-10deg);
-            }
-
-            70%,
-            100% {
-                -webkit-transform: rotateY(45deg) rotateZ(-10deg);
-                transform: rotateY(45deg) rotateZ(-10deg);
-            }
-        }
-
-        @-webkit-keyframes moveLineTwo {
-
-            0%,
-            20% {
-                -webkit-transform: rotateY(0) rotateZ(29deg);
-                transform: rotateY(0) rotateZ(29deg);
-            }
-
-            70%,
-            100% {
-                -webkit-transform: rotateY(15deg) rotateZ(29deg);
-                transform: rotateY(15deg) rotateZ(29deg);
-            }
-        }
-
-        @keyframes moveLineTwo {
-
-            0%,
-            20% {
-                -webkit-transform: rotateY(0) rotateZ(29deg);
-                transform: rotateY(0) rotateZ(29deg);
-            }
-
-            70%,
-            100% {
-                -webkit-transform: rotateY(15deg) rotateZ(29deg);
-                transform: rotateY(15deg) rotateZ(29deg);
-            }
-        }
-
-        @-webkit-keyframes moveLineThree {
-            0% {
-                -webkit-transform: translate(0, 0);
-                transform: translate(0, 0);
-            }
-
-            20% {
-                -webkit-transform: translate(2500%, -18%);
-                transform: translate(2500%, -18%);
-            }
-
-            60% {
-                -webkit-transform: translate(11000%, -25%);
-                transform: translate(11000%, -25%);
-            }
-
-            70% {
-                -webkit-transform: translate(9100%, -25%);
-                transform: translate(9100%, -25%);
-                height: 30%;
-            }
-
-            90%,
-            100% {
-                -webkit-transform: translate(9100%, -15%);
-                transform: translate(9100%, -15%);
-                height: 80%;
-            }
-        }
-
-        @keyframes moveLineThree {
-            0% {
-                -webkit-transform: translate(0, 0);
-                transform: translate(0, 0);
-            }
-
-            20% {
-                -webkit-transform: translate(2500%, -18%);
-                transform: translate(2500%, -18%);
-            }
-
-            60% {
-                -webkit-transform: translate(11000%, -25%);
-                transform: translate(11000%, -25%);
-            }
-
-            70% {
-                -webkit-transform: translate(9100%, -25%);
-                transform: translate(9100%, -25%);
-                height: 30%;
-            }
-
-            90%,
-            100% {
-                -webkit-transform: translate(9100%, -15%);
-                transform: translate(9100%, -15%);
-                height: 80%;
-            }
-        }
-    </style>
 </head>
 
 <body>
 
-    <div id="content">
-        <h1>
-            < Coming Soon />
-        </h1>
-        <p>Working day and night!</p>
-    </div>
-    <div id="outerCraneContainer">
-        <div class="buildings">
-            <div></div>
-            <div class="1"></div>
-            <div class="2"></div>
-            <div class="3"></div>
-            <div class="4"></div>
-        </div>
-        <div class="crane craneThree">
-            <div class="line lineOne"></div>
-            <div class="line lineTwo"></div>
-            <div class="line lineThree"></div>
-            <div class="stand"></div>
-            <div class="weight"></div>
-            <div class="cabin"></div>
-            <div class="arm"></div>
-        </div>
-        <div class="crane craneTwo">
-            <div class="line lineOne"></div>
-            <div class="line lineTwo"></div>
-            <div class="line lineThree"></div>
-            <div class="stand"></div>
-            <div class="weight"></div>
-            <div class="cabin"></div>
-            <div class="arm"></div>
-        </div>
-        <div class="crane craneOne">
-            <div class="line lineOne"></div>
-            <div class="line lineTwo"></div>
-            <div class="line lineThree"></div>
-            <div class="stand"></div>
-            <div class="weight"></div>
-            <div class="cabin"></div>
-            <div class="arm"></div>
-        </div>
-    </div>
+	<div id="fullpage">
+
+		<!-- start home -->
+		<div id="home" class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-2"></div>
+					<div class="col-md-8 wow fadeIn" data-wow-delay="0.9s">
+						<h3>I am </h3>
+						<h1>Vedant Patwa</h1>
+						<h2 class="rotate">SEPG Lead, Process Engineering, ISO 9001:2015 QMS LA , Quality &AMP; Compliance
+							Specialist</h2>
+						<p>A Quality Enthusatic, who works with an aim to deliver the high quality process output</p>
+						<a href="#work" class="btn btn-default smoothScroll wow fadeInUp" data-wow-delay="1s">About
+							Me</a>
+					</div>
+					<div class="col-md-2"></div>
+				</div>
+			</div>
+		</div>
+		<!-- end home -->
+
+		<!-- start work -->
+		<div id="work" class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 wow bounce">
+						<h2>What I do ?</h2>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-4 col-xs-11 wow fadeInUp" data-wow-delay="0.6s">
+						<div class="media">
+							<div class="media-object media-left">
+								<i class="fa fa-briefcase"></i>
+							</div>
+							<div class="media-body">
+								<h3 class="media-heading">SEPG Lead</h3>
+								<p> Managing CMMI Dev V2.0 L3 Process Complaince</p>
+								<p> @ <a rel="nofollow" href="https://www.stridelysolutions.com/" target="_blank">
+										Stridely Solutions </a> </p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4 col-xs-11 wow fadeInUp" data-wow-delay="0.6s">
+						<div class="media">
+							<div class="media-object media-left">
+								<i class="fa fa-link"></i>
+							</div>
+							<div class="media-body">
+								<h3 class="media-heading"> ISO 9001:2015 QMS LA</h3>
+								<p> ISO 9001:2015 QMS Lead Audior <a rel="nofollow"
+										href="https://www.bsigroup.com/en-IN/" target="_blank">
+										bsi. </a> Certified </p>
+								<p> Acredited By : <a rel="nofollow" href="http://www.quality.org/" target="_blank"> CQI
+										& IRCA </a> </p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4 col-xs-11 wow fadeInUp" data-wow-delay="0.6s">
+						<div class="media">
+							<div class="media-object media-left">
+								<i class="fa fa-paper-plane"></i>
+							</div>
+							<div class="media-body">
+								<h3 class="media-heading">Document Controller</h3>
+								<p> Managing Documentation & Templatization</p>
+								<p> @ <a rel="nofollow" href="https://www.stridelysolutions.com/" target="_blank">
+									Stridely Solutions </a> </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end work -->
+
+		<!-- start about -->
+		<div id="about" class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-xs-11 wow fadeInLeft" data-wow-delay="0.9s">
+						<h2>About Me</h2>
+						<h4>Process Engineer</h4>
+						<p style="text-align:justify"> The SEPG Lead, Process Engineer & Quality Enthusiastic having
+							experience in Implementation of CMMI Processes, First Party Audits of
+							Software Projects including Support Groups of the organization into Quality Management
+							Systems (QMS),
+							Information Security Management Systems (ISMS).</p>
+						<p style="text-align:justify"> IRCA & CQI Certified ISO 9001:2015 QMS Lead Auditor with a higher
+							emphasis on Quality & Information
+							Management Systems and their process improvements.</p>
+						<p style="text-align:justify"> Proven ability to successfully drive QMS Audits along with record
+							of displaying strong & effective
+							identification of process gap & provide the suggestions for improving them.</p>
+					</div>
+					<div class="col-md-6 col-xs-11 wow fadeInRight" data-wow-delay="0.9s">
+						<h2>Skills</h2>
+						<span class="text-top"> Networking & Collabration <small>95%</small></span>
+						<div class="progress">
+							<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60"
+								aria-valuemin="0" aria-valuemax="100" style="width: 95%;"></div>
+						</div>
+						<span>Effective Negotiation Skills <small>85%</small></span>
+						<div class="progress">
+							<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60"
+								aria-valuemin="0" aria-valuemax="100" style="width: 85%;"></div>
+						</div>
+						<span>Process Engineering & Gap Rectification <small>85%</small></span>
+						<div class="progress">
+							<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80"
+								aria-valuemin="0" aria-valuemax="100" style="width: 85%;"></div>
+						</div>
+						<span>Documentation<small>70%</small></span>
+						<div class="progress">
+							<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60"
+								aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
+						</div>
+						<span>ISO 9001:2015 QMS <small>90%</small></span>
+						<div class="progress">
+							<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60"
+								aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
+						</div>
+						<span>ISO 27001:2013 ISMS <small>90%</small></span>
+						<div class="progress">
+							<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60"
+								aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
+						</div>
+						<span>CMMI Dev V2.0 L3 <small>50%</small></span>
+						<div class="progress">
+							<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60"
+								aria-valuemin="0" aria-valuemax="100" style="width: 50%;"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end about -->
+
+		<!-- start experience -->
+		<div id="experience" class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 col-xs-12 wow fadeInLeft" data-wow-delay="0.9s"></div>
+					<h2>Experience</h2>
+					<div class="col-md-4">
+						<h4>Stridely Solutions</h4>
+						<p> SEPG Consultant - SEPG </P>
+						<P> Sep 2020 - Present </p>
+					</div>
+					<div class="col-md-4">
+						<h4>Rishabh Software Pvt. Ltd.</h4>
+						<p> Associate Process Engineer, SQA </P>
+						<P> Oct 2019 - Aug 2020 </p>
+					</div>
+					<div class="col-md-4">
+						<h4>Rishabh Software Pvt. Ltd.</h4>
+						<p> Trainee, SQA </P>
+						<P> Oct 2018 - Sep 2019 </p>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 col-xs-12 wow fadeInLeft" data-wow-delay="0.9s"></div>
+					<div class="col-md-4">
+						<h4>Rishabh Software Pvt. Ltd.</h4>
+						<p> Associate Process Engineer, SQA </P>
+						<P> Oct 2019 - Aug 2020 </p>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end about -->
+
+	<!-- start portfolio -->
+	<div id="portfolio" class="section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h2 class="wow bounce">Projects</h2>
+				</div>
+				<div class="col-md-4 col-xs-6 wow fadeIn" data-wow-delay="0.6s">
+					<div class="portfolio-thumb">
+						<img src="images/portfolio-img1.jpg" class="img-responsive" alt="portfolio img">
+						<div class="portfolio-overlay">
+							<p> <a rel="nofollow" href="https://github.com/Patwavedant/Rise_Travels" target="_blank">
+									Rise Travels </a> </p>
+							<h5>A Travel Expense Manager for Travelers</h5>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-xs-6 wow fadeIn" data-wow-delay="0.6s">
+					<div class="portfolio-thumb">
+						<img src="images/portfolio-img3.jpg" class="img-responsive" alt="portfolio img">
+						<div class="portfolio-overlay">
+							<p> <a rel="nofollow" href="https://github.com/Patwavedant/intern_dsr" target="_blank">
+									Intern DSR </a> </p>
+							<h5>Portal for Interns to submit their DSR</h5>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-xs-6 wow fadeIn" data-wow-delay="0.6s">
+					<div class="portfolio-thumb">
+						<img src="images/portfolio-img4.jpg" class="img-responsive" alt="portfolio img">
+						<div class="portfolio-overlay">
+							<p> <a rel="nofollow"
+									href="https://github.com/Patwavedant/Student_Management_System_Web_App"
+									target="_blank">
+									Student Management System - Web App </a> </p>
+							<h5>A cutomized Management System for colleges to manage the student history</h5>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-xs-6 wow fadeIn" data-wow-delay="0.6s">
+					<div class="portfolio-thumb">
+						<img src="images/portfolio-img5.jpg" class="img-responsive" alt="portfolio img">
+						<div class="portfolio-overlay">
+							<p> <a rel="nofollow"
+									href="https://github.com/Patwavedant/Student_Management_System_Mobile_App"
+									target="_blank">
+									Student Management System - Mobile App </a> </p>
+							<h5>A cutomized mobile app for students to check thier details</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end portfolio -->
+
+	<!-- start contact -->
+	<div id="contact" class="section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-5 col-lg-offset-1 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+					<address>
+						<p class="contact-title">Contact Me</p>
+						<p><i class="fa fa-phone"></i> +91-7069055513</p>
+						<p><i class="fa fa-envelope-o"></i> patwavedant@gmail.com</p>
+						<p><a href="https://github.com/Patwavedant" target="_blank"><i
+									class="fa fa-github"></i>Patwavedant</a></p>
+						<p><i class="fa fa-map-marker"></i>Vadodara, Gujarat - 390020</a></p>
+					</address>
+				</div>
+				<div class="col-lg-6 col-md-6 col-xs-10 wow fadeInUp" data-wow-delay="0.6s">
+					<form role="form" method="post" data-netlify="true">
+						<input name="name" type="text" class="form-control" id="name" placeholder="Your Name">
+						<input name="email" type="email" class="form-control" id="email" placeholder="Your Email">
+						<textarea name="message" rows="5" class="form-control" id="message"
+							placeholder="Your Message"></textarea>
+						<input name="send" type="submit" class="form-control" id="send" value="SEND ME">
+					</form>
+				</div>
+				<div class="col-md-1 col-sm-1"></div>
+			</div>
+		</div>
+	</div>
+	<!-- end contact -->
+
+	<!-- start footer -->
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 wow fadeIn" data-wow-delay="0.9s">
+					<p>Copyright &copy; 2020 Vedant Patwa</p>
+					<hr>
+					<ul class="social-icon">
+						<li><a href="https://www.linkedin.com/in/vedantpatwa" target="_blank"
+								class="fa fa-linkedin"></a></li>
+						<li><a href="https://github.com/Patwavedant" target="_blank" class="fa fa-github"></a></li>
+						<li><a href="https://www.instagram.com/vedant_patwa/" target="_blank"
+								class="fa fa-instagram"></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- end footer -->
+
+	</div>
+
+	<!-- jQuery -->
+	<script src="js/jquery.js"></script>
+	<!-- bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- fullpage -->
+	<script src="js/jquery.fullPage.js"></script>
+	<!-- smoothScroll -->
+	<script src="js/smoothscroll.js"></script>
+	<!-- wow -->
+	<script src="js/wow.min.js"></script>
+	<!-- text rotater -->
+	<script src="js/jquery.simple-text-rotator.js"></script>
+	<!-- custom -->
+	<script src="js/custom.js"></script>
+
 </body>
 
 </html>

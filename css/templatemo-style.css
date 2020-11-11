@@ -358,7 +358,7 @@ h5 {
 
 /* start portfolio */
 #portfolio {
-    background: url(../images/projects-bg.jpg) no-repeat top center fixed;
+    background: #000000;
     background-size: cover;
     background-repeat: no-repeat;
     padding-top: 110px;
@@ -403,7 +403,7 @@ h5 {
 /* start contact */
 
 #contact {
-    background:url(../images/contact-bg.jpg) no-repeat top center fixed;
+    background:#1a1a1a;
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
